@@ -1,15 +1,14 @@
 <?php
 /**
  * Concatenates JavaScript files and compresses them
- * by removing comments, line breaks and unnecessary spaces
+ * by removing comments, line breaks and unnecessary spaces.
  *
- * @param string $relpath Relative path where the files are located
- * @param array $files Filenames, not including path
- * @param string $fname Name of the combined file
+ * @param string $relpath Relative path where the files are located.
+ * @param array $files Filenames, not including path but including file extension.
+ * @param string $fname Name of the combined file, including file extension.
  */
-function jsconcat($relpath, $files, $fname = "combined") {
+function jsconcat($relpath, $files, $fname = "combined.js") {
 	$relpath = trim($relpath, "/") . "/";
-	$fname .= strstr($files[0], '.');
 	$furl = $relpath . $fname;
 	$tempcontent = "";
 	
