@@ -36,8 +36,8 @@ function jsconcat($relpath, $files, $fname = "combined.js") {
 		
 		// Strip some spaces
 		$tempcontent = str_replace(
-			array(' }', '{ ', '; ', ', ', ' : function', ' = function', 'function (', ') {', ' = ', ' == ', ' === ', ' + ', ' += ', ' != ', ' !== ', ', '), // Replace these...
-			array('}', '{', ';', ',', ':function', '=function', 'function(', '){', '=', '==', '===', '+', '+=', '!=', '!==', ','), // ..with these
+			array(' }', '{ ', '; ', ', ', '} else', 'else {', 'if (', ' : function', ' = function', 'function (', ') {', ' = ', ' == ', ' === ', ' + ', ' += ', ' != ', ' !== ', ', '), // Replace these...
+			array('}', '{', ';', ',', '}else', 'else{', 'if(', ':function', '=function', 'function(', '){', '=', '==', '===', '+', '+=', '!=', '!==', ','), // ..with these
 			$tempcontent);
 		
 		// Append to combined file
