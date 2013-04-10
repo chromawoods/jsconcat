@@ -21,7 +21,7 @@ Include the file and run the static init method using these params:
 
 ```php
 require_once('JSConcat.php');
-jsconcat::init('js/modules', array('module1.js', 'module2.js', 'module3.js'), 'modules.js');
+JSConcat::init('js/modules', array('module1.js', 'module2.js', 'module3.js'), 'modules.js');
 ```
 
 License
