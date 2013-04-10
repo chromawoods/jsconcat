@@ -3,6 +3,10 @@ jsconcat
 
 *A PHP function that concatenates JavaScript files and compresses them by removing comments, line breaks and unnecessary spaces.*
 
+Requirements
+------------
+PHP 5.3, because the script has an anonymous function baked into it. :) I'm going to fix this later by classifying jsconcat.
+
 Usage
 -----
 Useful when you have multiple internal JS files in the same directory, for example a bunch of modules.
