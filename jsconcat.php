@@ -1,8 +1,13 @@
 <?php
-/**
+/***
  * Concatenates JavaScript files and compresses them
  * by removing comments, line breaks and unnecessary spaces.
- *
+ * Copyright 2013 Andreas Larsson <andreas@chromawoods.com> - http://chromawoods.com/
+ * Released under the WTFPL license: http://www.wtfpl.net/
+ * 
+ * @version 0.2
+ * @author Andreas Larsson
+ * 
  * @param string $relpath Relative path where the files are located.
  * @param array $files Filenames, not including path but including file extension.
  * @param string $fname Name of the combined file, including file extension.
