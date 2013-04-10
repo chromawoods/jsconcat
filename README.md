@@ -13,9 +13,9 @@ Useful when you have multiple internal JS files in the same directory, for examp
 
 How to use
 ----------
-Include the file and run the static init method using these params:
+Include the file and run the static ```init``` method using these params:
 
-* ```$relpath``` (string) Relative path where your js files are located.
+* ```$rel_path``` (string) Relative path where your js files are located.
 * ```$files``` (array) JavaScript file names, excluding path but including file extension.
 * ```$fname``` (string) [optional] Name of the concatenated file, including file extension. Default value is "combined.js".
 
@@ -29,7 +29,7 @@ JSConcat::init('js/modules', $filesToConcat, 'modules.js');
 
 TODO
 ----
-* Make param ```$files``` optional - would cause all .js files except ```$fname``` to be concatenated.
+* Make param ```$files``` optional - would concatenate all .js files in a directory except ```$fname```.
 
 License
 -------
