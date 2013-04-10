@@ -7,22 +7,29 @@ Requirements
 ------------
 PHP 5 should be enough. Additionally, PHP must have write permissions for the directory in which to create the concatenated JS file.
 
-Usage
------
-Useful when you have multiple internal JS files in the same directory, for example a bunch of modules.
+When to use
+-----------
+Useful when you have multiple internal JS files in the same directory, for example a bunch of modules. Use JSConcat.php in a development environment and then just deploy the combined file to production and let the individual JS files stay on your dev env. There's no point of having the production server concatenate a bunch of files in every request.
 
+How to use
+----------
 Include the file and run the static init method using these params:
 
-* $relpath (string) Relative path where your js files are located.
-* $files (array) JavaScript file names, excluding path but including file extension.
-* $fname (string) [optional] Name of the concatenated file, including file extension. Default value is "combined.js".
+* ```$relpath``` (string) Relative path where your js files are located.
+* ```$files``` (array) JavaScript file names, excluding path but including file extension.
+* ```$fname``` (string) [optional] Name of the concatenated file, including file extension. Default value is "combined.js".
 
 ### Example
 
 ```php
 require_once('JSConcat.php');
-JSConcat::init('js/modules', array('module1.js', 'module2.js', 'module3.js'), 'modules.js');
+$filesToConcat = array('NiftyModule.js', 'AwesomeModule.js', 'ChuckNorrisModule.js');
+JSConcat::init('js/modules', $filesToConcat, 'modules.js');
 ```
+
+TODO
+----
+* Make param ```$files``` optional - would cause all .js files except ```$fname``` to be concatenated.
 
 License
 -------
