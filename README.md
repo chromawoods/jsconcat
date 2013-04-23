@@ -16,20 +16,24 @@ How to use
 Include the file and run the static ```init``` method using these params:
 
 * ```$rel_path``` (string) Relative path where your js files are located.
-* ```$files``` (array) JavaScript file names, excluding path but including file extension.
-* ```$fname``` (string) [optional] Name of the concatenated file, including file extension. Default value is "combined.js".
+* ```$files``` (array) (optional) JavaScript file names, excluding path but including file extension. If omitted, JSConcat will attempt to concatenate all .js files in the specified directory, except existing combined file.
+* ```$fname``` (string) (optional) Name of the concatenated file, including file extension. Default name is "combined.js".
 
 ### Example
 
 ```php
 require_once('JSConcat.php');
-$filesToConcat = array('NiftyModule.js', 'AwesomeModule.js', 'ChuckNorrisModule.js');
-JSConcat::init('js/modules', $filesToConcat, 'modules.js');
+$filesToConcat = array('Mercury.js', 'Tellus.js', 'Mars.js');
+JSConcat::init('js/modules', $filesToConcat, 'planets.js');
 ```
 
-TODO
-----
-* Make param ```$files``` optional - would concatenate all .js files in a directory except ```$fname```.
+Or just:
+
+```php
+require_once('JSConcat.php');
+JSConcat::init('js/modules');
+```
+
 
 License
 -------
